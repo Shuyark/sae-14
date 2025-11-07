@@ -1,0 +1,85 @@
+.titre
+{
+    text-align: center;
+}
+nav
+{
+    justify-content: right;
+    font-size:50px ;
+    color : inherit;
+}
+
+header
+{   
+    background-color: yellow;
+    backdrop-filter: blur(10px); /* pour l'opacité */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    cursor: url('D:/BUT RT/1ERE ANNEE/sae 14/curseur.cur') 16 16, auto !important;
+}
+
+/* Barre de navigation */
+.navbar {
+    position: sticky; /* Reste en haut de la page quand on défile */
+    top: 0; /* Positionner en haut de la page */
+    background-color: rgba(18, 18, 18, 0.8); /* Fond noir légèrement transparent */
+    backdrop-filter: blur(10px); /* Effet de flou */
+    padding: 10px 0;
+    z-index: 1000; /* Assure que la barre est au-dessus des autres éléments */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Transition pour les effets */
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin: 0 20px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Survol des éléments du menu */
+.navbar-menu a:hover {
+    color: yellow;
+}
+
+/* Style du bouton Acheter maintenant */
+.buy-button {
+    background-color: rgb(0, 0, 0);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #ffcc00;
+}
+
+/* Lors du défilement, on modifie l'apparence de la navbar */
+.navbar.scrolled {
+    background-color: rgba(18, 18, 18, 1); /* Fond plus opaque lorsqu'on défile */
+    backdrop-filter: blur(5px); /* Réduire l'effet de flou au défilement */
+}
+
+/* Du contenu pour tester le défilement */
+main {
+    height: 20px; /* Long contenu pour tester le scroll */
+}
