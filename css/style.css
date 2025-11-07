@@ -115,5 +115,45 @@ body {
 main {
     height: 20px; /* Long contenu pour tester le scroll */
 }
+.retour
+{
+    justify-content: center;
+    text-align: center;
+}
+.navbar-description
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar-menu-description ul
+{
+    margin: 0 20px;
+}
+
+.navbar-menu-description a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+.navbar-menu-description a:hover 
+{
+    color: yellow;
+}
+.navbar-description {
+    background-color: black; 
+    backdrop-filter: blur(10px); /* Effet de flou */
+    padding: 1px 0;
+    z-index: 1000; /* Assure que la barre est au-dessus des autres éléments */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Transition pour les effets */
+}
+
+
 
 
