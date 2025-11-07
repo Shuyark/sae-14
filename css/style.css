@@ -1,6 +1,33 @@
+.i {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Prend la largeur du conteneur parent */
+    height: auto; /* Garde la proportion du GIF */
+}
+
+.background 
+{
+    width: 100%; /* GIF s'ajuste à la taille du conteneur */
+    height: auto; /* Garde la proportion du GIF */
+}
+
+.overlay-image 
+{
+    position: absolute;
+    top: 70px;  /* Ajuste la position verticale du logo */
+    left: 20px; /* Ajuste la position horizontale du logo */
+    width: 500px; /* Taille du logo */
+    height: auto; /* Garde la proportion du logo */
+}
+
 .titre
 {
     text-align: center;
+}
+
+.perso
+{
+    text-align: right;
 }
 nav
 {
@@ -8,7 +35,12 @@ nav
     font-size:50px ;
     color : inherit;
 }
-
+a
+{
+    justify-content: right;
+    font-size:50px ;
+    color : inherit;
+}
 header
 {   
     background-color: yellow;
@@ -83,3 +115,5 @@ body {
 main {
     height: 20px; /* Long contenu pour tester le scroll */
 }
+
+
