@@ -9,6 +9,7 @@
 {
     width: 100%; /* GIF s'ajuste à la taille du conteneur */
     height: auto; /* Garde la proportion du GIF */
+    max-width: 100%;
 }
 
 .overlay-image 
@@ -16,19 +17,34 @@
     position: absolute;
     top: 70px;  /* Ajuste la position verticale du logo */
     left: 20px; /* Ajuste la position horizontale du logo */
-    width: 500px; /* Taille du logo */
+    width: 50%; /* Taille du logo */
     height: auto; /* Garde la proportion du logo */
 }
 
-.titre
+.titre h1
 {
-    text-align: center;
+    font-size: 3em;
+    justify-content: center;
 }
 
-.perso
+.titre 
 {
-    text-align: right;
+    text-align: center;
+    width: 100%; /* Pour s'assurer que l'élément prend toute la largeur */
+    margin-top: 20px;
 }
+
+.perso h3
+{
+    font-size: 1.5em;
+}
+
+.perso {
+    text-align: right;
+    margin-top: 30px;
+    padding-right: 20px;
+}
+
 nav
 {
     justify-content: right;
@@ -40,6 +56,7 @@ a
     justify-content: right;
     font-size:50px ;
     color : inherit;
+    max-width: 100%
 }
 header
 {   
@@ -66,6 +83,7 @@ body {
 
 .navbar-menu {
     display: flex;
+    flex-wrap:wrap ;
     justify-content: center;
     align-items: center;
     list-style-type: none;
@@ -74,15 +92,14 @@ body {
 }
 
 .navbar-menu li {
-    margin: 0 20px;
+    margin: 10px ;
 }
 
 .navbar-menu a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
-    font-weight: bold;
-    position: relative;
+    font-size: 16px;
+
 }
 
 /* Survol des éléments du menu */
@@ -120,40 +137,30 @@ main {
     justify-content: center;
     text-align: center;
 }
-.navbar-description
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.navbar-menu-description ul
-{
-    margin: 0 20px;
-}
 
-.navbar-menu-description a {
-    text-decoration: none;
+@media (max-width: 768px) {
+    .overlay-image {
+      width: 70%; /* Sur petits écrans, on met une image par ligne */
+      left: 50%;
+      transform: translateX(-50%);/* Utilise le transform pour le centrage exact */
+    }
+  }
+
+
+.description 
+{
+    text-align: center;
+    font-family: "Arial" ;
     color: white;
-    font-size: 24px;
-    font-weight: bold;
-    position: relative;
-}
+    margin: 50px;
+    text-transform: uppercase;
 
-.navbar-menu-description a:hover 
+}
+.desc
 {
-    color: yellow;
-}
-.navbar-description {
-    background-color: black; 
-    backdrop-filter: blur(10px); /* Effet de flou */
-    padding: 1px 0;
-    z-index: 1000; /* Assure que la barre est au-dessus des autres éléments */
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Transition pour les effets */
+    background-color: black;
+    
 }
 
 
-
-
+  
