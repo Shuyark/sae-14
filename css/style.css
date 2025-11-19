@@ -1,37 +1,41 @@
 .i {
     position: relative;
     display: inline-block;
-    width: 100%; /* Prend la largeur du conteneur parent */
-    height: auto; /* Garde la proportion du GIF */
+    width: 100%; 
+    height: auto; 
 }
 
 .background 
 {
-    width: 100%; /* GIF s'ajuste à la taille du conteneur */
-    height: auto; /* Garde la proportion du GIF */
+    width: 100%; 
+    height: auto; 
     max-width: 100%;
+    display: block; 
 }
 
 .overlay-image 
 {
     position: absolute;
-    top: 70px;  /* Ajuste la position verticale du logo */
-    left: 20px; /* Ajuste la position horizontale du logo */
-    width: 50%; /* Taille du logo */
-    height: auto; /* Garde la proportion du logo */
+    top: 70px;  
+    left: 20px; 
+    width: 50%; 
+    height: auto; 
 }
 
 .titre h1
 {
-    font-size: 3em;
+    font-size: 2em;
     justify-content: center;
+    margin-top: 100px;
+    margin-bottom: -100px;
 }
 
 .titre 
 {
     text-align: center;
-    width: 100%; /* Pour s'assurer que l'élément prend toute la largeur */
+    width: 100%;
     margin-top: 20px;
+    padding: 0 20px; 
 }
 
 .perso h3
@@ -48,42 +52,44 @@
 nav
 {
     justify-content: right;
-    font-size:50px ;
-    color : inherit;
+    font-size: 50px;
+    color: inherit;
 }
+
 a
 {
     justify-content: right;
-    font-size:50px ;
-    color : inherit;
-    max-width: 100%
+    font-size: 50px;
+    color: inherit;
+    max-width: 100%;
 }
+
 header
 {   
     background-color: yellow;
-    backdrop-filter: blur(10px); /* pour l'opacité */
+    backdrop-filter: blur(10px);
 }
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    cursor: url('D:/BUT RT/1ERE ANNEE/sae 14/curseur.cur') 16 16, auto !important;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Barre de navigation */
 .navbar {
-    position: sticky; /* Reste en haut de la page quand on défile */
-    top: 0; /* Positionner en haut de la page */
-    background-color: rgba(18, 18, 18, 0.8); /* Fond noir légèrement transparent */
-    backdrop-filter: blur(10px); /* Effet de flou */
-    padding: 10px 0;
-    z-index: 1000; /* Assure que la barre est au-dessus des autres éléments */
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Transition pour les effets */
+    position: sticky;
+    top: 0;
+    background-color: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px; 
+    z-index: 1000;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 .navbar-menu {
     display: flex;
-    flex-wrap:wrap ;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     list-style-type: none;
@@ -92,22 +98,19 @@ body {
 }
 
 .navbar-menu li {
-    margin: 10px ;
+    margin: 10px;
 }
 
 .navbar-menu a {
     text-decoration: none;
     color: white;
     font-size: 16px;
-
 }
 
-/* Survol des éléments du menu */
 .navbar-menu a:hover {
     color: yellow;
 }
 
-/* Style du bouton Acheter maintenant */
 .buy-button {
     background-color: rgb(0, 0, 0);
     color: black;
@@ -122,45 +125,202 @@ body {
     background-color: #ffcc00;
 }
 
-/* Lors du défilement, on modifie l'apparence de la navbar */
 .navbar.scrolled {
-    background-color: rgba(18, 18, 18, 1); /* Fond plus opaque lorsqu'on défile */
-    backdrop-filter: blur(5px); /* Réduire l'effet de flou au défilement */
+    background-color: rgba(18, 18, 18, 1);
+    backdrop-filter: blur(5px);
 }
 
-/* Du contenu pour tester le défilement */
 main {
-    height: 20px; /* Long contenu pour tester le scroll */
+    min-height: 20px; 
+    padding: 0 20px; 
 }
+
 .retour
 {
     justify-content: center;
     text-align: center;
+    padding: 20px;
 }
 
+/*----------------------- btn description---------------------*/
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.btn-description {
+    background: #ffed4e;
+    color: #000000;
+    border: 2px solid #ffb700;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.2s ease;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+}
+
+.btn-description:hover { 
+    background: #ffb700;
+}
+
+.btn-description::before {
+    display: none;
+}
+
+.text-container {
+    margin-top: 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-out, opacity 0.8s ease-out;
+    opacity: 0;
+}
+
+.text-container.active {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.description-text {
+    background: rgba(20, 20, 20, 0.95);
+    border-radius: 4px;
+    padding: 25px;
+    color: #e0e0e0;
+    font-size: 16px;
+    line-height: 1.8;
+    position: relative;
+}
+
+/*---------- Adaptation aux tailles d'écrans ------- */
+
+/* Tablettes et petits écrans */
 @media (max-width: 768px) {
     .overlay-image {
-      width: 70%; /* Sur petits écrans, on met une image par ligne */
-      left: 50%;
-      transform: translateX(-50%);/* Utilise le transform pour le centrage exact */
+        width: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 40px; 
     }
-  }
-
-
-.description 
-{
-    text-align: center;
-    font-family: "Arial" ;
-    color: white;
-    margin: 50px;
-    text-transform: uppercase;
-
-}
-.desc
-{
-    background-color: black;
     
+    .titre h1 {
+        font-size: 2em; 
+    }
+    
+    .perso h3 {
+        font-size: 1.2em;
+    }
+    
+    .perso {
+        text-align: center; 
+        padding: 0 20px;
+    }
+    
+    nav, a {
+        font-size: 35px; 
+    }
+    
+    .navbar-menu {
+        flex-direction: column; /* menu vertical sur tel */
+        gap: 5px;
+    }
+    
+    .navbar-menu li {
+        margin: 5px 0;
+    }
+    
+    .navbar-menu a {
+        font-size: 14px;
+    }
+    
+    .btn-description {
+        padding: 12px 30px;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+    }
+    
+    .description-text {
+        padding: 20px;
+        font-size: 15px;
+    }
 }
 
+/* pour les téléphones*/
+@media (max-width: 480px) {
+    .overlay-image {
+        width: 80%;
+        top: 30px;
+    }
+    
+    .titre h1 {
+        font-size: 1.5em;
+    }
+    
+    .titre {
+        margin-top: 10px;
+    }
+    
+    .perso h3 {
+        font-size: 1em;
+    }
+    
+    nav, a {
+        font-size: 25px;
+    }
+    
+    .navbar {
+        padding: 10px;
+    }
+    
+    .navbar-menu a {
+        font-size: 12px;
+    }
+    
+    .buy-button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    
+    .btn-description {
+        padding: 10px 20px;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    
+    .description-text {
+        padding: 15px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+}
 
-  
+@media (max-width: 360px) {
+    .titre h1 {
+        font-size: 1.2em;
+    }
+    
+    .overlay-image {
+        width: 90%;
+        top: 20px;
+    }
+    
+    nav, a {
+        font-size: 20px;
+    }
+    
+    .btn-description {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
