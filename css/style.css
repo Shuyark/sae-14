@@ -22,12 +22,29 @@
     height: auto; 
 }
 
+@font-face {
+    font-display: swap;
+    font-family: Refinery-25;
+    font-style: normal;
+    font-weight: 600;
+    src:url('../font/Refinery-25SemiBold-dac0d12b.woff2') format("woff2"),
+        url('../font/Refinery-25SemiBold-8a4883af.woff') format("woff");
+    
+}
+
 .titre h1
 {
-    font-size: 2em;
+    
     justify-content: center;
     margin-top: 100px;
     margin-bottom: -100px;
+    font-family: Refinery-25, sans-serif;
+    text-shadow: 2px 2px 0 #5de39b, -2px -2px 0 #c362c0;
+    font-size: 70px;
+    font-style: normal;
+    text-transform: uppercase;
+
+    
 }
 
 .titre 
@@ -36,6 +53,7 @@
     width: 100%;
     margin-top: 20px;
     padding: 0 20px; 
+    box-sizing: border-box; 
 }
 
 .perso h3
@@ -54,6 +72,7 @@ nav
     justify-content: right;
     font-size: 50px;
     color: inherit;
+    max-width: 100%; 
 }
 
 a
@@ -66,8 +85,9 @@ a
 
 header
 {   
-    background-color: yellow;
     backdrop-filter: blur(10px);
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 body {
@@ -75,6 +95,9 @@ body {
     margin: 0;
     justify-content: center;
     align-items: center;
+    width: 100%; 
+    background-color: yellow;
+
 }
 
 .navbar {
@@ -85,6 +108,8 @@ body {
     padding: 10px 20px; 
     z-index: 1000;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 .navbar-menu {
@@ -132,7 +157,9 @@ body {
 
 main {
     min-height: 20px; 
-    padding: 0 20px; 
+    padding: 0 20px;
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 .retour
@@ -149,6 +176,7 @@ main {
     text-align: center;
     margin: 0 auto;
     padding: 20px;
+    box-sizing: border-box; 
 }
 
 .btn-description {
@@ -323,4 +351,51 @@ main {
         padding: 8px 15px;
         font-size: 12px;
     }
+}
+
+.j {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.character-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.character-card img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.character-card img:hover {
+    transform: scale(1.1) translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 255, 242, 0.5);
+}
+
+.desc-btn {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ffed4e , #ffb700);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.desc-btn:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 187, 0, 0.6);
 }
