@@ -19,34 +19,112 @@
                 <li><a href="#">FR</a></li>
             </ul>
         </nav>
-        <div class ="titre">
+        <div class ="titre3">
             <h1>Cyberpunk Edgerunners</h1>
+            
+        </div>
+        <div class = titre2>
+            <h2>Personnages</h2>
         </div>
         <main>
             <section style="height: 200px;"></section>
         </main>
-    <div class="j">
-            <div class="character-card">
-                <img src="david.png" alt="cyberpunk" class="background">
-                <button class="desc-btn">Description</button>
+   <div class="j">
+    <div class="character-card">
+        <img src="david.png" alt="cyberpunk" class="background">
+        <button class="desc-btn" onclick="toggleDescription('text1')">David</button>
+        <div class="text-container" id="text1">
+            <div class="description-text1">
+               David est un adolescent des rues de Night City, débrouillard et déterminé, qui essaie de survivre dans un environnement brutal. Au départ plutôt réservé, il porte en lui une colère sourde contre le système qui écrase les gens comme lui. Son implantation d’un cyberware légendaire le transforme progressivement en un véritable “edgerunner”. Il est animé par un mélange de loyauté, d’ambition et d’un besoin presque désespéré de prouver sa valeur. Son design mêle allure élancée, regard fier et une énergie nerveuse typique des jeunes de NC.
             </div>
-        <div class="character-card">
-             <img src="lucy.png" alt="cyberpunk" class="background">
-            <button class="desc-btn">Description</button>
-        </div>
-        <div class="character-card">
-            <img src="rebecca.png" alt="cyberpunk" class="background">
-            <button class="desc-btn">Description</button>
-        </div>
-        <div class="character-card">
-            <img src="main.png" alt="cyberpunk" class="background">
-            <button class="desc-btn">Description</button>
-        </div>
-        <div class="character-card">
-            <img src="Adam_smasher.png" alt="cyberpunk" class="background">
-            <button class="desc-btn">Description</button>
         </div>
     </div>
+
+    <div class="character-card">
+        <img src="lucy.png" alt="cyberpunk" class="background">
+        <button class="desc-btn" onclick="toggleDescription('text2')">Lucy</button>
+        <div class="text-container" id="text2">
+            <div class="description-text1">
+                Lucy est une netrunner mystérieuse et talentueuse, calme en apparence mais marquée par un passé douloureux. Elle a un charisme froid, presque éthéré, qui contraste avec les violences de Night City. Indépendante, vive d’esprit, elle jongle entre distance émotionnelle et un vrai désir d’échapper à la ville. Physiquement, elle se distingue par son look cyberpunk élégant : cheveux blanc argenté, gestuelle fluide, et implants discrets mais redoutablement efficaces.
+            </div>
+        </div>
+    </div>
+
+    <div class="character-card">
+        <img src="rebecca.png" alt="cyberpunk" class="background">
+        <button class="desc-btn" onclick="toggleDescription('text3')">Rebecca</button>
+        <div class="text-container" id="text3">
+            <div class="description-text1">
+                Rebecca est une petite bombe d’énergie. Petite de taille mais énorme en personnalité, elle mélange humour noir, impulsivité et une loyauté féroce envers ceux qu’elle aime. C’est une edgerunner qui adore la baston, les grosses armes et les punchlines. Elle a un style flashy, coloré, presque chaotique, qui reflète son tempérament explosif. Malgré son côté imprévisible, elle possède une sensibilité que peu prennent le temps de voir.
+            </div>
+        </div>
+    </div>
+
+    <div class="character-card">
+        <img src="main.png" alt="cyberpunk" class="background">
+        <button class="desc-btn" onclick="toggleDescription('text4')">Maine</button>
+        <div class="text-container" id="text4">
+            <div class="description-text1">
+                Maine est un mercenaire expérimenté, massif et imposant, qui agit comme le pilier du crew. C’est un leader charismatique, fier, mais aussi profondément humain. Il combine force brute, expérience et un certain sens de l’honneur, même dans un monde qui n’en a plus. Son corps lourdement amélioré par le cyberware symbolise autant son statut que la pression permanente qu’il subit. Il incarne la figure du mentor et du vétéran fatigué par Night City mais pas encore brisé.
+            </div>
+        </div>
+    </div>
+
+    <div class="character-card">
+        <img src="Adam_smasher.png" alt="cyberpunk" class="background">
+        <button class="desc-btn" onclick="toggleDescription('text5')">Adam Smasher</button>
+        <div class="text-container" id="text5">
+            <div class="description-text1">
+               Adam Smasher est l’un des symboles les plus terrifiants de Night City : un cyborg quasi intégral converti en arme vivante au service d’Arasaka. Froid, impitoyable, dénué d’empathie, il représente la fusion extrême entre technologie et effacement total d’humanité. Sa silhouette géante entièrement cybernétisée dégage une présence monstrueuse. Smasher n’est pas seulement un antagoniste : il est le produit ultime de la logique corporatiste de NC, où la vie humaine n’a plus de valeur.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleDescription(id) {
+        const textContainer = document.getElementById(id);
+        textContainer.classList.toggle('active');
+    }
+</script>
+
+<div class="video-carousel">
+    <button class="carousel-btn prev" onclick="changeVideo(-1)">←</button>
+    
+    <div class="video-container">
+        <iframe id="currentVideo" width="100%" height="450" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <button class="carousel-btn next" onclick="changeVideo(1)">→</button>
+</div>
+
+<script>
+    // On crée un tableau avec tous les liens de vidéos
+    const videos = [
+        'https://www.youtube.com/embed/JtqIas3bYhg?si=7oLhI_rPLffD_FbT',
+        'https://www.youtube.com/embed/KvMY1uzSC1E?si=m-WIFXczsenzrGZ6',
+        'https://www.youtube.com/embed/OfpEefjin5Q?si=TW0db3fshxHk-vIp'
+    ];
+    // Variable qui garde en mémoire quelle vidéo on regarde actuellement
+    let currentIndex = 0;
+    
+    // 3. Fonction qui change de vidéo quand on clique sur les flèches
+    function changeVideo(direction) {
+        currentIndex += direction;
+            // Si on dépasse la dernière vidéo, on retourne à la première
+        if (currentIndex >= videos.length) {
+            currentIndex = 0;
+            // Si on est avant la première vidéo, on va à la dernière
+        } else if (currentIndex < 0) {
+            currentIndex = videos.length - 1;
+        }
+            // On change le lien de l'iframe pour afficher la nouvelle vidéo
+        document.getElementById('currentVideo').src = videos[currentIndex];
+    }
+    
+    // Charge la première vidéo au démarrage
+    document.getElementById('currentVideo').src = videos[0];
+</script>
 
     <div class = "perso">
             <h3>Jouisse Théotime</h3>
