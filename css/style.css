@@ -294,7 +294,21 @@ main {
     .titre {
         margin-top: 10px;
     }
+    .cyberpunk_edgrunner
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%; 
+    box-sizing: border-box; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 50px 20px; 
+    min-height: auto; 
     
+}
     .perso h3 {
         font-size: 1em;
     }
@@ -454,7 +468,7 @@ main {
 }
 
 .video-carousel {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 50px auto;
     display: flex;
     align-items: center;
@@ -477,4 +491,17 @@ main {
 
 .carousel-btn:hover {
     background: #ffed4e;
+}
+
+.cyberpunk_edgerunner {
+    background: rgba(0, 0, 0, 0.9);
+    color: #e0e0e0;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 50px auto;
+    line-height: 1.8;
+    font-size: 16px;
+    box-shadow: 0 0 30px #5de39b;
+    border: 1px solid #c362c0;
 }
