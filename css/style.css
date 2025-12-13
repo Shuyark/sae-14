@@ -610,3 +610,65 @@ main {
             left: -2.4rem;
         }
 }
+/*----------------------------------A propos---------------------------------------*/
+    
+
+.about-page {
+    background: yellow;
+    color: black;
+}
+
+.about-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-header {
+    border-left: 3px solid white;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+.about-header h1 {
+    color:white;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about-section {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: rgba(0, 255, 255, 0.03);
+    border: 1px solid #5de39b;
+}
+
+.about-section h2 {
+    color:white;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c362c0;
+    padding-bottom: 10px;
+}
+
+.about-section p {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.about-skill-item {
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.4);
+    border-left: 2px solid #c362c0;
+    color:white;
+}
+
+@media (max-width: 768px) {
+    .about-header h1 {
+        font-size: 1.5em;
+    }
+            
+    .about-skills {
+        grid-template-columns: 1fr;
+    }
+}
