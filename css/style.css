@@ -104,10 +104,8 @@ body {
     position: sticky;
     top: 0;
     background-color: rgba(18, 18, 18, 0.8);
-    backdrop-filter: blur(10px);
     padding: 10px 20px; 
     z-index: 1000;
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
     width: 100%; 
     box-sizing: border-box; 
 }
@@ -134,20 +132,6 @@ body {
 
 .navbar-menu a:hover {
     color: yellow;
-}
-
-.buy-button {
-    background-color: rgb(0, 0, 0);
-    color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-}
-
-.buy-button:hover {
-    background-color: #ffcc00;
 }
 
 .navbar.scrolled {
@@ -191,17 +175,12 @@ main {
     letter-spacing: 2px;
     transition: all 0.2s ease;
     position: relative;
-    display: inline-block;
     width: auto;
     max-width: 100%;
 }
 
 .btn-description:hover { 
     background: #ffb700;
-}
-
-.btn-description::before {
-    display: none;
 }
 
 .text-container {
@@ -557,7 +536,7 @@ main {
 }
         
 .timeline::before {
-    content: '';
+    content: ''; /* affiche le trait vertical*/
     position: absolute;
     left: 0;
     top: 0;
