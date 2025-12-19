@@ -9,7 +9,7 @@
 - images => Répertoire avec toutes les images
 - Gestion de projet => Répertoire Livrables R115
 - README.md => La documentation
-- Validation W3C => Screen de la validations
+- Validation W3C => Screen de la validation
 # 🧰 Technologies utilisées
 ## Langage
 - HTML
