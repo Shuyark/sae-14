@@ -10,6 +10,7 @@
 - Gestion de projet => Répertoire Livrables R115
 - README.md => La documentation
 - Validation W3C => Screen de la validation
+- Font => Fichiers pour la police d'écriture 
 # 🧰 Technologies utilisées
 ## Langage
 - HTML
