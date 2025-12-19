@@ -2,6 +2,7 @@
  Ce projet présente le jeu, la série animé et l'univers, ce site est disposé en 4 pages, une pour l'accueil, une pour le jeu, une pour la série et la dernière parlant de moi même
 # 📁 Éléments du site :
 - index.html => Page d'Acceuil
+- Logo cyberpunk => cliquable
 - Jeux.html => Page sur le jeu
 - A propos.html => Page sur moi
 - css => Contient le fichier style.css où on retrouve le code css des pages
