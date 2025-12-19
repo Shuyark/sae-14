@@ -14,7 +14,10 @@
 - CSS
 ## Hébergement
 - Github Pages
-# 🔗 Lien au site 
+# 🔗 Liens
+## Lien du site
 https://shuyark.github.io/sae-14/
+## Lien du trello 
+https://trello.com/b/ZR7zF1nh/site-web-sae-104
 # 🎨 Design du site
 Ce site comporte une ambiance futuriste tout comme l'univers de cyberpunk, mon objectif est de vous plonger dans l'univers de cybepunk.
